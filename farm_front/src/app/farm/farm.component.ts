@@ -29,7 +29,16 @@ export class FarmComponent implements OnInit {
       drawType: type,
       callback: geometry => {
           const geo = new GeoJSON().writeGeometryObject(geometry) as any
+          var area = geometry.getArea() //get area from geometry projected on plane
+          var output;
+          if (area > 10000) {
+            output = Math.round((area / 1000000) * 100) / 100 + ' ' + 'km<sup>2</sup>';
+          } else {
+            output = Math.round(area * 100) / 100 + ' ' + 'm<sup>2</sup>';
+          }
           this.handleNewGeometry(geo)
+
+          alert(output)
         }
       }))
   }
@@ -56,6 +65,6 @@ export class FarmComponent implements OnInit {
 
 
   ngOnDestroy() {
-    this._map.removeByPrefix('geometry')
+    //this._map.removeByPrefix('geometry')
   }
 }
