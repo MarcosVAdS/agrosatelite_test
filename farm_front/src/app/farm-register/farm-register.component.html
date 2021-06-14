@@ -11,24 +11,24 @@
       <form>
         <mat-form-field appearance="outline">
           <mat-label>Farm Name</mat-label>
-          <input matInput placeholder="Farm Name" name="farm_name">
+          <input matInput placeholder="Farm Name" name="farm_name" [(ngModel)]="farm.farm_name">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Owner Name</mat-label>
-          <input matInput placeholder="Owner name" name="owner_name">
+          <input matInput placeholder="Owner name" name="owner_name" [(ngModel)]="farm.owner_name">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>CPF</mat-label>
-          <input matInput placeholder="just numbers" name="cpf">
+          <input matInput placeholder="just numbers" name="cpf" [(ngModel)]="farm.cpf_owner">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Total Area</mat-label>
-          <input matInput name="total_area">
+          <input matInput name="total_area" [(ngModel)]="farm.total_area">
           <span matSuffix>km</span>
         </mat-form-field>
       </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary">Save</button>
+    <button mat-flat-button color="primary" (click)="submitForm()">Save</button>
   </mat-card-actions>
 </mat-card>
