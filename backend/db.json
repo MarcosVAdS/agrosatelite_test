@@ -1,0 +1,86 @@
+{
+  "farm": [
+    {
+      "id": 1,
+      "name": "Fazenda 1",
+      "geometry": "polygon",
+      "area": "10",
+      "centroid": "123",
+      "is_active": "S",
+      "municipality": "Belém",
+      "state": "Pará",
+      "owner": "1"
+    },
+    {
+      "id": 2,
+      "name": "Fazenda 2",
+      "geometry": "polygon",
+      "area": "20",
+      "centroid": "200",
+      "is_active": "N",
+      "municipality": "Ananindeua",
+      "state": "Pará",
+      "owner": "1"
+    },
+    {
+      "id": 3,
+      "name": "Fazenda 3",
+      "geometry": "polygon",
+      "area": "1200",
+      "centroid": "500",
+      "is_active": "S",
+      "municipality": "Belém",
+      "state": "Pará",
+      "owner": "2"
+    },
+    {
+      "name": "Fazenda 4",
+      "geometry": "polygon",
+      "area": "500",
+      "centroid": 0,
+      "municipality": "Oriximiná",
+      "state": "Pará",
+      "is_active": false,
+      "owner": "2",
+      "id": 4
+    },
+    {
+      "name": "Fazenda 4",
+      "geometry": "polygon",
+      "area": "5000",
+      "centroid": 0,
+      "municipality": "Oriximiná",
+      "state": "Pará",
+      "is_active": false,
+      "owner": "1",
+      "id": 5
+    },
+    {
+      "name": "Fazenda 5",
+      "geometry": "polygon",
+      "area": "5000",
+      "centroid": 0,
+      "municipality": "Oriximiná",
+      "state": "Pará",
+      "is_active": false,
+      "owner": "1",
+      "id": 6
+    }
+  ],
+  "owner": [
+    {
+      "id": 1,
+      "name": "Fulano",
+      "document": "000.000.000-00",
+      "document_type": "CPF",
+      "is_active": "S"
+    },
+    {
+      "id": 2,
+      "name": "Beltrano",
+      "document": "111.111.111-11",
+      "document_type": "CPF",
+      "is_active": "S"
+    }
+  ]
+}

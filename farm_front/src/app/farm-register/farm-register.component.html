@@ -11,21 +11,30 @@
       <form>
         <mat-form-field appearance="outline">
           <mat-label>Farm Name</mat-label>
-          <input matInput placeholder="Farm Name" name="farm_name" [(ngModel)]="farm.farm_name">
+          <input matInput placeholder="Farm Name" name="name" [(ngModel)]="farm.name">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Owner Name</mat-label>
-          <input matInput placeholder="Owner name" name="owner_name" [(ngModel)]="farm.owner_name">
+          <mat-select [(ngModel)]="farm.owner" name="owner">
+            <mat-option value="1">fulano</mat-option>
+            <mat-option value="2">beltrano</mat-option>
+            <mat-option value="3">ciclano</mat-option>
+          </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>CPF</mat-label>
-          <input matInput placeholder="just numbers" name="cpf" [(ngModel)]="farm.cpf_owner">
+          <mat-label>State</mat-label>
+          <input matInput name="state" [(ngModel)]="farm.state">
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Total Area</mat-label>
-          <input matInput name="total_area" [(ngModel)]="farm.total_area">
+          <mat-label>Municipality</mat-label>
+          <input matInput placeholder="just numbers" name="municipality" [(ngModel)]="farm.municipality">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Area</mat-label>
+          <input matInput name="area" [(ngModel)]="farm.area">
           <span matSuffix>km</span>
         </mat-form-field>
+          <mat-slide-toggle name="is_active" [(ngModel)]="farm.is_active">Slide me?</mat-slide-toggle>
       </form>
   </mat-card-content>
   <mat-card-actions>

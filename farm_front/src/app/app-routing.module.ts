@@ -9,7 +9,7 @@ import { FarmRegisterComponent } from './farm-register/farm-register.component'
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'farm', component: FarmComponent },
-  { path: 'details/:id', component: DetailsComponent },
+  { path: 'farm/details/:id', component: DetailsComponent },
   { path: 'farm/register', component: FarmRegisterComponent }
 ];
 

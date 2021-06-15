@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FarmServiceService } from '../farm_service/farm-service.service';
-import { Farm } from './farm.model';
+import { Farm } from '../farm_service/farm.model';
 
 @Component({
   selector: 'app-farm-register',
@@ -11,20 +12,28 @@ import { Farm } from './farm.model';
 export class FarmRegisterComponent implements OnInit {
 
   farm: Farm = {
-    farm_name: '',
-    farm_owner:'',
-    cpf_owner: '',
-    total_area: 0 
+    name: '',
+    geometry: 'polygon',
+    area: 0,
+    centroid: 0,
+    municipality: '',
+    state: '',
+    is_active: false,
+    owner: 1
   }
 
-  constructor(private farmService:  FarmServiceService ) { }
+  constructor(private farmService:  FarmServiceService, private route: Router ) { }
 
   ngOnInit() {
 
   }
 
   submitForm(): void {
-    this.farmService.createFarm(this.farm)
+    console.log(this.farm)
+    this.farmService.createFarm(this.farm).subscribe(()=>{
+      this.farmService.createdMessage(`Created farm named: ${this.farm.name}`)
+      this.route.navigate(['/farm'])
+    })
   }
 
 }

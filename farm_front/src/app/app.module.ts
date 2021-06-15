@@ -8,7 +8,6 @@ import { FarmComponent } from './farm/farm.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailsComponent } from './details/details.component';
 import { FarmRegisterComponent } from './farm-register/farm-register.component';
-import { FarmListComponent } from './farm-list/farm-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -35,8 +37,7 @@ import { FormsModule } from '@angular/forms';
     FarmComponent,
     DashboardComponent,
     DetailsComponent,
-    FarmRegisterComponent,
-    FarmListComponent
+    FarmRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,9 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatSnackBarModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+{
+    "farm": {
+      "id": "Number",
+      "name": "String",
+      "geometry": "GeometryField",
+      "area": "Number",
+      "centroid": "PointField",
+      "is_active": "Bool",
+      "municipality": "String",
+      "state": "String",
+      "owner": "ID"
+    },
+    "owner": {
+      "id": "Number",
+      "name": "String",
+      "document": "String",
+      "document_type": "String [CPF, CNPJ]",
+      "is_active": "Bool"
+    }
+}
