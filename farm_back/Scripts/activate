@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\marco\Documents\Development\personal\agrosatelite_test\farm_back"
+VIRTUAL_ENV="C:\Users\marco\Documents\Development\personal\farm_back"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
