@@ -32,6 +32,10 @@ export class FarmServiceService {
     return this.http.get<Farm[]>(this.baseUrl)
   }
 
+  getFarmDetails(id: string): Observable<Farm>{
+    return this.http.get<Farm>(this.baseUrl + id)
+  }
+
   updateFarm(id: string, farm: Farm): Observable<Farm>{
     return this.http.put<any>(this.baseUrl + id, farm) 
   }

@@ -22,14 +22,13 @@ export class FarmRegisterComponent implements OnInit {
     owner: 1
   }
 
-  constructor(private farmService:  FarmServiceService, private route: Router ) { }
+  constructor( private farmService:  FarmServiceService, private route: Router ) { }
 
   ngOnInit() {
 
   }
 
   submitForm(): void {
-    console.log(this.farm)
     this.farmService.createFarm(this.farm).subscribe(()=>{
       this.farmService.createdMessage(`Created farm named: ${this.farm.name}`)
       this.route.navigate(['/farm'])

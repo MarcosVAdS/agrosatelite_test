@@ -1,3 +1,43 @@
-<p>
-  details works!
-</p>
+<mat-card>
+  <mat-card-header>
+      <button routerLink="" mat-card-avatar mat-mini-fab color="primary">
+        <mat-icon>home</mat-icon>
+      </button>
+      <mat-card-title>Register New Farm</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mt">
+      <hr>
+      <h4>to register a new farm fill in the form</h4>
+      <form>
+        <mat-form-field appearance="outline">
+          <mat-label>Farm Name</mat-label>
+          <input matInput placeholder="Farm Name" name="name" [(ngModel)]="farm.name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Owner Name</mat-label>
+          <mat-select [(ngModel)]="farm.owner" name="owner">
+            <mat-option value="1">fulano</mat-option>
+            <mat-option value="2">beltrano</mat-option>
+            <mat-option value="3">ciclano</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <input matInput name="state" [(ngModel)]="farm.state">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Municipality</mat-label>
+          <input matInput placeholder="just numbers" name="municipality" [(ngModel)]="farm.municipality">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Area</mat-label>
+          <input matInput name="area" [(ngModel)]="farm.area">
+          <span matSuffix>km</span>
+        </mat-form-field>
+          <mat-slide-toggle name="is_active" [(ngModel)]="farm.is_active">Slide me?</mat-slide-toggle>
+      </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" (click)="submitForm()">Save</button>
+  </mat-card-actions>
+</mat-card>

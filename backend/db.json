@@ -65,6 +65,17 @@
       "is_active": false,
       "owner": "1",
       "id": 6
+    },
+    {
+      "name": "Fazenda 6",
+      "geometry": "polygon",
+      "area": "5160",
+      "centroid": 0,
+      "municipality": "São Paulo",
+      "state": "São Paulo",
+      "is_active": true,
+      "owner": "1",
+      "id": 7
     }
   ],
   "owner": [

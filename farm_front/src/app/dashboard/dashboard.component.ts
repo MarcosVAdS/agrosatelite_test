@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Farm } from '../farm_service/farm.model';
 import { FarmServiceService } from '../farm_service/farm-service.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: 'dashboard.component.html',
@@ -13,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   displayedColumns = ['name', 'state', 'municipality', 'area']
 
-  constructor(private farmService: FarmServiceService ) { }
+  constructor(private farmService: FarmServiceService, private route: Router ) { }
 
   ngOnInit(): void {
     console.log("list")
@@ -21,5 +23,9 @@ export class DashboardComponent implements OnInit {
       this.farmList = farmList
       console.log(this.farmList)
     })
+  }
+
+  farmDetails(row){
+    this.route.navigate([`farm/details/${row.id}`])
   }
 }
