@@ -1,17 +1,20 @@
-<mat-card>
+<mat-card class="size">
     <mat-card-header>
         <mat-card-title>Farm</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <mat-grid-list cols="1" rowHeight="40px">
             <mat-grid-tile>
-                <button routerLink="" mat-raised-button color="primary" style="width: 100%;">Voltar</button>
+                <button routerLink="" mat-raised-button color="primary" style="width: 100%;">Return</button>
             </mat-grid-tile>
             <mat-grid-tile>
-                <button routerLink="register" mat-raised-button color="primary" style="width: 100%;">Novo cadastro</button>
+                <button routerLink="register" mat-raised-button color="primary" style="width: 100%;">New farm</button>
             </mat-grid-tile>
             <mat-grid-tile>
-                <button (click)="draw('Circle')" mat-raised-button color="primary" style="cursor: pointer; width: 100%;">Desenhar círculo</button>
+                <button routerLink="/owner/register" mat-raised-button color="primary" style="width: 100%;">New owner</button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button (click)="draw('Circle')" mat-raised-button color="primary" style="cursor: pointer; width: 100%;">Draw circle</button>
             </mat-grid-tile>
           </mat-grid-list>
     </mat-card-content>

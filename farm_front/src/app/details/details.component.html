@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="size">
   <mat-card-header>
       <button routerLink="" mat-card-avatar mat-mini-fab color="primary">
         <mat-icon>home</mat-icon>
@@ -16,9 +16,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Owner Name</mat-label>
           <mat-select [(ngModel)]="farm.owner" name="owner">
-            <mat-option value="1">fulano</mat-option>
-            <mat-option value="2">beltrano</mat-option>
-            <mat-option value="3">ciclano</mat-option>
+            <mat-option *ngFor="let owner of owners" value="{{owner.id}}">{{ owner.name }}</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline">
@@ -34,10 +32,11 @@
           <input matInput name="area" [(ngModel)]="farm.area">
           <span matSuffix>km</span>
         </mat-form-field>
-          <mat-slide-toggle name="is_active" [(ngModel)]="farm.is_active">Slide me?</mat-slide-toggle>
+          <mat-slide-toggle name="is_active" [(ngModel)]="farm.is_active">Active farm?</mat-slide-toggle>
       </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary" (click)="submitForm()">Save</button>
+    <button mat-flat-button color="primary" (click)="updateFarm()" class="button">Update</button>
+    <button mat-flat-button color="warn" (click)="deleteFarm()" class="button">Delete</button>
   </mat-card-actions>
 </mat-card>

@@ -1,0 +1,34 @@
+<mat-card class="size">
+  <mat-card-header>
+      <button routerLink="" mat-card-avatar mat-mini-fab color="primary">
+        <mat-icon>home</mat-icon>
+      </button>
+      <mat-card-title>Register New Farm</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mt">
+      <hr>
+      <h4>to register a new farm fill in the form</h4>
+      <form>
+        <mat-form-field appearance="outline">
+          <mat-label>Owner Name</mat-label>
+          <input matInput placeholder="Owner Name" name="name" [(ngModel)]="owner.name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Document Type</mat-label>
+          <mat-select [(ngModel)]="owner.document_type" name="document_type">
+            <mat-option value="CPF">CPF</mat-option>
+            <mat-option value="RG">RG</mat-option>
+            <mat-option value="CNPJ">CNPJ</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Document</mat-label>
+          <input matInput name="document" [(ngModel)]="owner.document">
+        </mat-form-field>
+        <mat-slide-toggle name="is_active" [(ngModel)]="owner.is_active">Active farm?</mat-slide-toggle>
+      </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" (click)="submitForm()" class="button">Save</button>    
+  </mat-card-actions>
+</mat-card>

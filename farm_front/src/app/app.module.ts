@@ -28,6 +28,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { OwnerRegisterComponent } from './owner-register/owner-register.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     FarmComponent,
     DashboardComponent,
     DetailsComponent,
-    FarmRegisterComponent
+    FarmRegisterComponent,
+    OwnerRegisterComponent
   ],
   imports: [
     BrowserModule,

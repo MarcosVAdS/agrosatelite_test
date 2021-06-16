@@ -14,7 +14,7 @@
       "id": "Number",
       "name": "String",
       "document": "String",
-      "document_type": "String [CPF, CNPJ]",
+      "document_type": "String [CPF, CNPJ, RG]",
       "is_active": "Bool"
     }
 }

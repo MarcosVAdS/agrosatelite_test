@@ -18,10 +18,8 @@ export class DashboardComponent implements OnInit {
   constructor(private farmService: FarmServiceService, private route: Router ) { }
 
   ngOnInit(): void {
-    console.log("list")
     this.farmService.readFarm().subscribe(farmList => {
       this.farmList = farmList
-      console.log(this.farmList)
     })
   }
 

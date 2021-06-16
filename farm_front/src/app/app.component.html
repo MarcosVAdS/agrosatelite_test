@@ -1,8 +1,10 @@
-<mat-toolbar color="primary">
-  <span>Application</span>
-</mat-toolbar>
-<div class="sidebar">
-  <router-outlet></router-outlet>
-</div>
-
-<app-basemap #map></app-basemap>
+<main>
+  <mat-toolbar color="primary">
+    <mat-icon> map</mat-icon>
+    <span>Farm Front</span>
+  </mat-toolbar>
+  <div>
+    <router-outlet></router-outlet>
+    <app-basemap #map></app-basemap>
+  </div>
+</main>

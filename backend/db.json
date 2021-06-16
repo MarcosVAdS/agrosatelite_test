@@ -6,7 +6,7 @@
       "geometry": "polygon",
       "area": "10",
       "centroid": "123",
-      "is_active": "S",
+      "is_active": false,
       "municipality": "Belém",
       "state": "Pará",
       "owner": "1"
@@ -17,7 +17,7 @@
       "geometry": "polygon",
       "area": "20",
       "centroid": "200",
-      "is_active": "N",
+      "is_active": true,
       "municipality": "Ananindeua",
       "state": "Pará",
       "owner": "1"
@@ -76,6 +76,39 @@
       "is_active": true,
       "owner": "1",
       "id": 7
+    },
+    {
+      "name": "Fazenda 7",
+      "geometry": "polygon",
+      "area": 38.78876107149134,
+      "centroid": 0,
+      "municipality": "Belo Horizonte",
+      "state": "Minas Gerais",
+      "is_active": false,
+      "owner": "1",
+      "id": 8
+    },
+    {
+      "name": "Fazenda 8",
+      "geometry": "polygon",
+      "area": 8.969178805294973,
+      "centroid": 0,
+      "municipality": "Mosqueiro",
+      "state": "Pará",
+      "is_active": true,
+      "owner": "3",
+      "id": 9
+    },
+    {
+      "name": "Fazenda 9",
+      "geometry": "polygon",
+      "area": 30.42507359849398,
+      "centroid": 0,
+      "municipality": "Recife",
+      "state": "Pernabuco",
+      "is_active": true,
+      "owner": "4",
+      "id": 10
     }
   ],
   "owner": [
@@ -92,6 +125,20 @@
       "document": "111.111.111-11",
       "document_type": "CPF",
       "is_active": "S"
+    },
+    {
+      "name": "Marcos",
+      "document_type": "RG",
+      "document": "165541",
+      "is_active": true,
+      "id": 3
+    },
+    {
+      "name": "owner 4",
+      "document_type": "CPF",
+      "document": "010101010101",
+      "is_active": true,
+      "id": 4
     }
   ]
 }
