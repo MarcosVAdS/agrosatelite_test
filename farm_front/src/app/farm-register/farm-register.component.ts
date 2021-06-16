@@ -102,4 +102,8 @@ export class FarmRegisterComponent implements OnInit {
       this.createdMessage("You can't save a farm without a name")
     }
   }
+
+  ngOnDestroy() {
+    this._map.removeByPrefix('geometry')
+  }
 }

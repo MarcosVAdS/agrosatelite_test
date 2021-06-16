@@ -29,12 +29,12 @@ export class FarmComponent implements OnInit {
       drawType: type,
       callback: geometry => {
           const geo = new GeoJSON().writeGeometryObject(geometry) as any
-          var area = geometry.getArea() //get area from geometry projected on plane
+          var area = geometry.getArea()
           var output;
           if (area > 10000) {
-            output = Math.round((area / 1000000) * 100) / 100 + ' ' + 'km<sup>2</sup>';
+            output = Math.round((area / 1000000) * 100) / 100 + ' ' + 'km';
           } else {
-            output = Math.round(area * 100) / 100 + ' ' + 'm<sup>2</sup>';
+            output = Math.round(area * 100) / 100 + ' ' + 'm';
           }
           this.handleNewGeometry(geo)
 
